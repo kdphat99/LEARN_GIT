@@ -82,3 +82,5 @@ NOTE:
         git branch -M main                                                  # rename "master" branch to "main" branch.
         git push -u origin main                                             # Push what you have locally to your remote origin branch.
 
+        Note: git remote add origin https://<token>@github.com/kdphat99/LEARN_GIT.git
+        (token (see on onedrive): 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 -> maybe changes)
