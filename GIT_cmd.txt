@@ -76,3 +76,8 @@ NOTE:
 	The “$ git remote” command is used to update the remote URL.
 	On the other hand, the “$ git fetch” command updates the present branch without merging any changes.
 	However, the “$ git pull” command updates the present branch and merges any remote changes of the present branch.
+
+13. push an existing repository from the command line
+        git remote add origin https://github.com/kdphat99/LEARN_GIT.git
+        git branch -M main      // rename branch "master" to "main"
+        git push -u origin main
