@@ -78,6 +78,7 @@ NOTE:
 	However, the “$ git pull” command updates the present branch and merges any remote changes of the present branch.
 
 13. push an existing repository from the command line
-        git remote add origin https://github.com/kdphat99/LEARN_GIT.git
-        git branch -M main      // rename branch "master" to "main"
-        git push -u origin main
+        git remote add origin https://github.com/kdphat99/LEARN_GIT.git     # add the origin as the remote branch and give it this URL.
+        git branch -M main                                                  # rename "master" branch to "main" branch.
+        git push -u origin main                                             # Push what you have locally to your remote origin branch.
+
