@@ -1,0 +1,78 @@
+1. git status
+ 
+2. git remote update
+ 
+3. git checkout
+    -> git checkout -b <new branch>: create new local branch -> based current branch
+    -> git checkout <file/fodler>: remove all file/fodler working changes
+ 
+4. git add <folder/file>
+   git commit -m "message"
+		(git commit --amend -m "message" : update commit)
+   git push -u origin <branch>
+ 
+5. Delete file/folder
+    remove: rm -rfv <file/folder>
+    git add <file/folder>
+    git commit -m "message"
+    git push -u origin <branch>
+ 
+6. Diff
+    git diff --name-only <commit to diff> <path>
+    git difftool 171d482c <file/folder>		-> 171d482c: <commit to diff>
+ 
+7. Revert commit
+    git checkout <commit to revert>
+    git commit -m "message"
+ 
+8. Git reset
+    git reset --hard/soft HEAD^n 		-> ??? (search google)
+ 
+9. Clean un-tracked file
+    git clean -f
+ 
+10 git rebase
+    git checkout <master branch>
+    git pull
+    git checkout <my branch>
+    git rebase -i <master branch>
+    Check: git diff --name-only <master branch> ./
+ 
+11. Delete branch
+    Delte local branch: git branch -D <branch>
+    Delete server branch: git push -u origin --delete <branch>
+ 
+12. config user name & logline
+        $ sudo gedit ~/.gitconfig (Ubuntu)
+[user]
+        email = phatkd@fpt.com
+        name = PhatK
+[diff]
+ 
+        tool = bc
+ 
+[difftool "bc"]
+ 
+        path = /usr/bin/bcompare
+ 
+[merge]
+ 
+        tool = bc
+ 
+[mergetool "bc"]
+ 
+        path = /usr/bin/bcompare
+ 
+[alias]
+ 
+        logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
+ 
+[core]
+ 
+        autocrlf = false
+ 
+ 
+NOTE:
+	The “$ git remote” command is used to update the remote URL.
+	On the other hand, the “$ git fetch” command updates the present branch without merging any changes.
+	However, the “$ git pull” command updates the present branch and merges any remote changes of the present branch.
